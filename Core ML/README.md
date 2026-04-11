@@ -7,12 +7,23 @@ This folder holds small projects where we practice machine learning workflows en
 | Project | Folder | Goal |
 |--------|--------|------|
 | Insurance charges (Day 1) | [`insurance-cost-project/`](insurance-cost-project/) | Explore, clean, and prepare insurance data so we can later predict or explain **medical charges**. |
+| Housing prices (practice, synthetic) | [`housing-prices-project/`](housing-prices-project/) | Same workflow on **made-up** listings: target **`price`**, features like sqft, bedrooms, age, neighborhood, garage. |
+
+---
+
+## Housing sample project (second notebook)
+
+The notebook [`housing-prices-project/housing.ipynb`](housing-prices-project/housing.ipynb) reuses the **same ideas** as the insurance piece: EDA, cleaning, **`get_dummies`** with **`drop_first=True`**, **`pd.cut`** buckets (here **house age** instead of BMI), **`StandardScaler`** on selected numerics, **Pearson** correlation with the target, **chi-square** vs **`pd.qcut`** price bins, and a trimmed **`final_df`**.
+
+Because the data are **synthetic**, you can share the repo freely and still get believable plots. One teaching detail: after `get_dummies(..., drop_first=True)`, the column names depend on **alphabetical** category order—this project drops **`neighborhood_east`** as the reference level, so the dummy columns are **`neighborhood_north`** and **`neighborhood_south`**. Checking `df.columns` after encoding is a good habit.
+
+For deep explanations of EDA, scaling, correlation, and chi-square, read the sections below (they were written with the insurance notebook in mind; the **meaning** is the same when you swap `charges` for `price`).
 
 ---
 
 ## Concepts from the insurance project
 
-The notes below match what we do in [`insurance-cost-project/insurance.ipynb`](insurance-cost-project/insurance.ipynb). They are meant for revision: read the concepts here, then trace the same ideas in the notebook.
+The notes below match what we do in [`insurance-cost-project/insurance.ipynb`](insurance-cost-project/insurance.ipynb). They apply the same way to [`housing-prices-project/housing.ipynb`](housing-prices-project/housing.ipynb) (swap **`charges`** for **`price`** mentally). Read here, then trace the steps in whichever notebook you are using.
 
 ---
 
@@ -32,7 +43,10 @@ Loading the dataset is one line once pandas is available:
 
 ```python
 import pandas as pd
+
 df = pd.read_csv("insurance-checkpoint.csv")
+# Housing practice project (same folder as the notebook):
+# df = pd.read_csv("housing-sample.csv")
 ```
 
 ---

@@ -16,7 +16,8 @@ This repo is a personal workspace for learning machine learning. The file you ca
 
 **Where the hands-on work lives**
 
-- Project notebook and data: [`Core ML/insurance-cost-project/`](Core%20ML/insurance-cost-project/)
+- Insurance — notebook and data: [`Core ML/insurance-cost-project/`](Core%20ML/insurance-cost-project/)
+- Housing (synthetic) — same workflow, target `price`: [`Core ML/housing-prices-project/`](Core%20ML/housing-prices-project/)
 - Topic write-up (definitions + examples): [`Core ML/README.md`](Core%20ML/README.md)
 
 **Mistakes that taught something**
@@ -24,6 +25,10 @@ This repo is a personal workspace for learning machine learning. The file you ca
 - Imports fail if the kernel’s environment does not have the package — fix with `pip install` (or conda) **for that same interpreter**.
 - `sort_values(by=...)` needs a real **column** name, not a row index label.
 - `NameError: df_cleaned` means earlier cells were not run (or the kernel was restarted) — run from the top or “Run all.”
+
+## Second practice project — synthetic housing
+
+- Added [`Core ML/housing-prices-project/`](Core%20ML/housing-prices-project/): **`housing.ipynb`** + **`housing-sample.csv`** (fake listings), same pipeline as insurance for extra repetition.
 
 ---
 
