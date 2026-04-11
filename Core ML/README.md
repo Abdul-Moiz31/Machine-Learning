@@ -8,6 +8,7 @@ This folder holds small projects where we practice machine learning workflows en
 |--------|--------|------|
 | Insurance charges (Day 1) | [`insurance-cost-project/`](insurance-cost-project/) | Explore, clean, and prepare insurance data so we can later predict or explain **medical charges**. |
 | Housing prices (practice, synthetic) | [`housing-prices-project/`](housing-prices-project/) | Same workflow on **made-up** listings: target **`price`**, features like sqft, bedrooms, age, neighborhood, garage. |
+| Heart disease (tabular) | [`heart-disease-project/`](heart-disease-project/) | Same workflow on clinical-style rows; binary target **`HeartDisease`**, chi-square vs outcome (not binned continuous target). |
 
 ---
 
@@ -21,9 +22,19 @@ For deep explanations of EDA, scaling, correlation, and chi-square, read the sec
 
 ---
 
+## Heart disease project (third notebook)
+
+Notebook: [`heart-disease-project/heart.ipynb`](heart-disease-project/heart.ipynb).
+
+Same preprocessing habits: **`get_dummies(..., drop_first=True)`** on **`ChestPainType`**, **`RestingECG`**, **`ST_Slope`** (reference levels **ASY**, **LVH**, **Down** in default alphabetical ordering—verify on **`columns`**), binary maps for **`Sex`** and **`ExerciseAngina`**, **`pd.cut`** age bands, **`StandardScaler`** on continuous vitals.
+
+**Chi-square twist:** the target **`HeartDisease`** is already **binary**, so crosstabs use **feature × HeartDisease** instead of “binned continuous target × feature” like the insurance notebook. Pearson *r* with a 0/1 target is still a valid **linear** association screen, but interpretation stays cautious.
+
+---
+
 ## Concepts from the insurance project
 
-The notes below match what we do in [`insurance-cost-project/insurance.ipynb`](insurance-cost-project/insurance.ipynb). They apply the same way to [`housing-prices-project/housing.ipynb`](housing-prices-project/housing.ipynb) (swap **`charges`** for **`price`** mentally). Read here, then trace the steps in whichever notebook you are using.
+The notes below match what we do in [`insurance-cost-project/insurance.ipynb`](insurance-cost-project/insurance.ipynb). They apply the same way to [`housing-prices-project/housing.ipynb`](housing-prices-project/housing.ipynb) (swap **`charges`** for **`price`**) and mostly to [`heart-disease-project/heart.ipynb`](heart-disease-project/heart.ipynb) (binary **`HeartDisease`**, chi-square as described above). Read here, then trace the steps in whichever notebook you are using.
 
 ---
 
@@ -47,6 +58,8 @@ import pandas as pd
 df = pd.read_csv("insurance-checkpoint.csv")
 # Housing practice project (same folder as the notebook):
 # df = pd.read_csv("housing-sample.csv")
+# Heart project (same folder as that notebook):
+# df = pd.read_csv("heart.csv")
 ```
 
 ---

@@ -18,6 +18,7 @@ This repo is a personal workspace for learning machine learning. The file you ca
 
 - Insurance — notebook and data: [`Core ML/insurance-cost-project/`](Core%20ML/insurance-cost-project/)
 - Housing (synthetic) — same workflow, target `price`: [`Core ML/housing-prices-project/`](Core%20ML/housing-prices-project/)
+- Heart disease — binary target `HeartDisease`: [`Core ML/heart-disease-project/`](Core%20ML/heart-disease-project/)
 - Topic write-up (definitions + examples): [`Core ML/README.md`](Core%20ML/README.md)
 
 **Mistakes that taught something**
@@ -29,6 +30,10 @@ This repo is a personal workspace for learning machine learning. The file you ca
 ## Second practice project — synthetic housing
 
 - Added [`Core ML/housing-prices-project/`](Core%20ML/housing-prices-project/): **`housing.ipynb`** + **`housing-sample.csv`** (fake listings), same pipeline as insurance for extra repetition.
+
+## Third practice project — heart disease tabular set
+
+- Added [`Core ML/heart-disease-project/`](Core%20ML/heart-disease-project/): **`heart.ipynb`** + **`heart.csv`**, same EDA → encode → bands → scale → Pearson / chi-square → **`final_df`**, with chi-square against the **binary** outcome.
 
 ---
 
