@@ -1,0 +1,11 @@
+# Core stack for Core ML / insurance-cost-project notebooks
+# Python 3.9+ recommended (matches local venv)
+numpy==2.0.2
+pandas==2.3.3
+matplotlib==3.9.4
+seaborn==0.13.2
+scikit-learn==1.6.1
+scipy==1.13.1
+
+# Jupyter kernel (VS Code / Cursor / Jupyter)
+ipykernel==6.31.0
