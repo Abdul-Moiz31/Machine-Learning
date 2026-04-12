@@ -19,7 +19,8 @@ This repo is a personal workspace for learning machine learning. The file you ca
 - Insurance — notebook and data: [`Core ML/insurance-cost-project/`](Core%20ML/insurance-cost-project/)
 - Housing (synthetic) — same workflow, target `price`: [`Core ML/housing-prices-project/`](Core%20ML/housing-prices-project/)
 - Heart disease — binary target `HeartDisease`: [`Core ML/heart-disease-project/`](Core%20ML/heart-disease-project/)
-- Topic write-up (definitions + examples): [`Core ML/README.md`](Core%20ML/README.md)
+- Ford used cars — regression to **`price`**: [`Core ML/ford-used-cars-project/`](Core%20ML/ford-used-cars-project/)
+- Concept write-ups live in **each project’s `README.md`** (see [`Core ML/README.md`](Core%20ML/README.md) for the index).
 
 **Mistakes that taught something**
 
@@ -33,7 +34,11 @@ This repo is a personal workspace for learning machine learning. The file you ca
 
 ## Third practice project — heart disease tabular set
 
-- Added [`Core ML/heart-disease-project/`](Core%20ML/heart-disease-project/): **`heart.ipynb`** + **`heart.csv`**, same EDA → encode → bands → scale → Pearson / chi-square → **`final_df`**, with chi-square against the **binary** outcome.
+- Added [`Core ML/heart-disease-project/`](Core%20ML/heart-disease-project/): **`heart.ipynb`** + **`heart.csv`** — see that folder’s **[`README.md`](Core%20ML/heart-disease-project/README.md)** for the current pipeline and definitions (notebook may evolve).
+
+## Fourth practice project — Ford used car prices
+
+- Added [`Core ML/ford-used-cars-project/`](Core%20ML/ford-used-cars-project/): **`ford.ipynb`** + **`ford.csv`** — definitions in **[`ford-used-cars-project/README.md`](Core%20ML/ford-used-cars-project/README.md)**.
 
 ---
 
